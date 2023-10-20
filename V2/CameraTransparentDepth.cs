@@ -17,8 +17,8 @@ public class CameraTransparentDepth : MonoBehaviour
     public RenderTexture transparent_pixelated_object_textures;
     public RenderTexture depth_unpixelated_objects_texture;
     public RenderTexture depth_pixelated_objects_texture;
-    public RenderTexture merge_objects_texture;
-    public RenderTexture merge_objects_pixelated_texture;
+    public RenderTexture unpixelated_object_texture;
+    public RenderTexture pixelated_object_texture;
 
     public Shader DepthShader;
     private void Start() {
@@ -80,10 +80,10 @@ public class CameraTransparentDepth : MonoBehaviour
 
         
         // cam_depth_pixelated.cullingMask = ~(1<<11);
-        cam_merge.targetTexture = merge_objects_texture;
+        cam_merge.targetTexture = unpixelated_object_texture;
 
         cam_merge_pixel_part.cullingMask = ~(1<<11);
-        cam_merge_pixel_part.targetTexture = merge_objects_pixelated_texture;
+        cam_merge_pixel_part.targetTexture = pixelated_object_texture;
         // cam_depth_unpixelated.RenderWithShader(DepthShader,"Opaque");
 
     }

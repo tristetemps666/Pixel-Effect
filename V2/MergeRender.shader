@@ -3,9 +3,9 @@ Shader "Hidden/MergeRender"
     Properties
     {
         _cam_tex ("Texture de la cam", 2D) = "red" {}
-        _cam_tex_pixelated_elements ("Texture des elemtns de la cam pixélisés", 2D) = "red" {}
+        _cam_tex_pixelated_elements ("Texture des elements de la cam pixélisés", 2D) = "blue" {}
         _depth_tex ("Texture profondeur nom pixélisée", 2D) = "white" {}
-        _depth_tex_pixelated ("Texture profondeur pixélisée", 2D) = "white" {}
+        _depth_tex_pixelated ("Texture profondeur pixélisée", 2D) = "green" {}
         _sizePixels("Size of the pixel effect", Range(10.0,100.0)) = 50.0
     }
     SubShader
